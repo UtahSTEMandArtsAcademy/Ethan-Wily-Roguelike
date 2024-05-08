@@ -21,4 +21,4 @@ MonoBehaviour:
   bulletSize: 0
   relaod: 1
   bullitLife: 1
-  bulletSped: 5
+  bulletSped: 100

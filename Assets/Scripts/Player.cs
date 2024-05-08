@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
         Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mouseScreenPosition - (Vector2)transform.position).normalized;
         transform.up = direction;
-
+        
         if(Input.GetButton("Fire1"))
         {
             gun.Shoot();
