@@ -18,6 +18,8 @@ public class emnemieAI : MonoBehaviour
     private float speed;
     public float health;
     public AnenomeStats STATS;
+    public PlayerData data;
+
     public aiTypes ai;
     // Start is called before the first frame update
     void Start()
@@ -58,6 +60,7 @@ public class emnemieAI : MonoBehaviour
         if(health < 1)
         {
             Destroy(this.gameObject);
+            data.cashmoneys += STATS.worth;
         }
     }
     public void checkStats()
@@ -79,6 +82,20 @@ public class emnemieAI : MonoBehaviour
                 
                     speed = STATS.speed;
                 break;
+        }
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("bullit"))
+        {
+            health -= data.damage;
+        }
+    }
+    void OnCollisionEnter2D(Collision2D other2)
+    {
+        if (other2.gameObject.CompareTag("player"))
+        {
+            data.health -= STATS.damage;
         }
     }
 }

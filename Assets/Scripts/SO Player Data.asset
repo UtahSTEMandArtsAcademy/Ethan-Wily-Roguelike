@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   spread: 0
-  damage: 0
+  damage: 1
   dash: 0
-  cashmoneys: 0
   projectiles: 0
   bulletSize: 0
   relaod: 1
   bullitLife: 1
-  bulletSped: 100
+  bulletSped: 125
+  cashmoneys: 1
+  health: 10

@@ -18,3 +18,5 @@ MonoBehaviour:
   chargeSpeed: 500
   fireRate: 1e+11
   accuracy: 3000000
+  worth: 3
+  damage: 3

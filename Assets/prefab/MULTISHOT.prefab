@@ -101,7 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  health: 0
   STATS: {fileID: 11400000, guid: 266d95d04578b4711b9c5d699ea9f7d5, type: 2}
+  data: {fileID: 11400000, guid: 9a61fbea16c6b4b3095cc98afa8470f3, type: 2}
   ai: 1
 --- !u!50 &8805470011580992741
 Rigidbody2D:

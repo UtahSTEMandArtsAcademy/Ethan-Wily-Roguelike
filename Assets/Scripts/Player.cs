@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         hahaRigidbodyGoBrr=GetComponent<Rigidbody2D>();
+        stats.health = 10;
     }
 
     // Update is called once per frame
@@ -27,6 +28,11 @@ public class Player : MonoBehaviour
         {
             gun.Shoot();
         }
-
+        if (stats.health == 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
+
+   
 }
