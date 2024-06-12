@@ -11,6 +11,8 @@ public class AnenomeStats : ScriptableObject
     public float chargeSpeed;
     public float fireRate;
     public float accuracy;
+    public float bulletSpd;
     public int worth;
     public int damage;
+    public float bullitLife;
 }

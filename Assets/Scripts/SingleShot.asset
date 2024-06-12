@@ -16,7 +16,9 @@ MonoBehaviour:
   speed: 50
   chargeRadius: 0
   chargeSpeed: 0
-  fireRate: 1e+11
+  fireRate: 5
   accuracy: 3000000
+  bulletSpd: 10
   worth: 1
   damage: 1
+  bullitLife: 1

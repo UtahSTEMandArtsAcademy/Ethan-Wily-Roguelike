@@ -21,6 +21,9 @@ public class emnemieAI : MonoBehaviour
     public PlayerData data;
 
     public aiTypes ai;
+    public float timer;
+    public GameObject bullet;
+    public GameObject firePoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,11 +37,19 @@ public class emnemieAI : MonoBehaviour
     {
         Vector2 direction = (player.transform.position - transform.position).normalized;
         transform.up = direction;
+        timer += Time.deltaTime;
         rb.AddForce(direction * speed * Time.deltaTime);
         switch(ai)
         {
             case aiTypes.SingleShot:
             speed = STATS.speed;
+            if(timer>=STATS.fireRate)
+            {
+                Rigidbody2D bul = Instantiate(bullet, firePoint.transform.position, transform.rotation).GetComponent<Rigidbody2D>();
+                bul.AddForce(transform.up * STATS.bulletSpd, ForceMode2D.Impulse);
+                timer = 0;
+                Destroy(bul.gameObject, STATS.bullitLife);
+            }
             break;
 
             case aiTypes.MultiShot:
