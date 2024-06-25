@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
         {
             gun.Shoot();
         }
-        if (stats.health == 0)
+        if (stats.health <= 0)
         {
             Destroy(this.gameObject);
         }
